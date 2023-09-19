@@ -1,0 +1,1661 @@
+[info] Flyway Community Edition 5.0.7 by Boxfuse
+[info] Database: jdbc:postgresql://postgres:5432/masterypath (PostgreSQL 9.6)
+[debug] Scanning for SQL callbacks ...
+[debug] Scanning for filesystem resources at 'modules/flyway/migration' (Prefix: '', Suffixes: '.sql')
+[debug] Scanning for resources in path: modules/flyway/migration (modules/flyway/migration)
+[debug] Found filesystem resource: modules/flyway/migration/DOWNS.sql
+[debug] Found filesystem resource: modules/flyway/migration/V10__183_account_types.sql
+[debug] Found filesystem resource: modules/flyway/migration/V11__111_org_config_membership_rates.sql
+[debug] Found filesystem resource: modules/flyway/migration/V12__43_schema for billing.sql
+[debug] Found filesystem resource: modules/flyway/migration/V13__187_schema for org_website_settings.sql
+[debug] Found filesystem resource: modules/flyway/migration/V14__196_mind_map_published_course.sql
+[debug] Found filesystem resource: modules/flyway/migration/V15__197_site_settings_ammendment.sql
+[debug] Found filesystem resource: modules/flyway/migration/V1__schema for organization.sql
+[debug] Found filesystem resource: modules/flyway/migration/V2__schema for map.sql
+[debug] Found filesystem resource: modules/flyway/migration/V3__schema for flashcard.sql
+[debug] Found filesystem resource: modules/flyway/migration/V4__INITIAL_DATA.sql
+[debug] Found filesystem resource: modules/flyway/migration/V5__124_cards_due_fix.sql
+[debug] Found filesystem resource: modules/flyway/migration/V6__126_card_due_fix.sql
+[debug] Found filesystem resource: modules/flyway/migration/V7__33_card_audio.sql
+[debug] Found filesystem resource: modules/flyway/migration/V8__34_card_markdown.sql
+[debug] Found filesystem resource: modules/flyway/migration/V9__154_nodejs_flashcardtype.sql
+[debug] Validating migrations ...
+[debug] Scanning for filesystem resources at 'modules/flyway/migration' (Prefix: 'V', Suffixes: '.sql')
+[debug] Scanning for resources in path: modules/flyway/migration (modules/flyway/migration)
+[debug] Filtering out resource: modules/flyway/migration/DOWNS.sql (filename: DOWNS.sql)
+[debug] Found filesystem resource: modules/flyway/migration/V10__183_account_types.sql
+[debug] Found filesystem resource: modules/flyway/migration/V11__111_org_config_membership_rates.sql
+[debug] Found filesystem resource: modules/flyway/migration/V12__43_schema for billing.sql
+[debug] Found filesystem resource: modules/flyway/migration/V13__187_schema for org_website_settings.sql
+[debug] Found filesystem resource: modules/flyway/migration/V14__196_mind_map_published_course.sql
+[debug] Found filesystem resource: modules/flyway/migration/V15__197_site_settings_ammendment.sql
+[debug] Found filesystem resource: modules/flyway/migration/V1__schema for organization.sql
+[debug] Found filesystem resource: modules/flyway/migration/V2__schema for map.sql
+[debug] Found filesystem resource: modules/flyway/migration/V3__schema for flashcard.sql
+[debug] Found filesystem resource: modules/flyway/migration/V4__INITIAL_DATA.sql
+[debug] Found filesystem resource: modules/flyway/migration/V5__124_cards_due_fix.sql
+[debug] Found filesystem resource: modules/flyway/migration/V6__126_card_due_fix.sql
+[debug] Found filesystem resource: modules/flyway/migration/V7__33_card_audio.sql
+[debug] Found filesystem resource: modules/flyway/migration/V8__34_card_markdown.sql
+[debug] Found filesystem resource: modules/flyway/migration/V9__154_nodejs_flashcardtype.sql
+[debug] Scanning for filesystem resources at 'modules/flyway/migration' (Prefix: 'R', Suffixes: '.sql')
+[debug] Scanning for resources in path: modules/flyway/migration (modules/flyway/migration)
+[debug] Filtering out resource: modules/flyway/migration/DOWNS.sql (filename: DOWNS.sql)
+[debug] Filtering out resource: modules/flyway/migration/V10__183_account_types.sql (filename: V10__183_account_types.sql)
+[debug] Filtering out resource: modules/flyway/migration/V11__111_org_config_membership_rates.sql (filename: V11__111_org_config_membership_rates.sql)
+[debug] Filtering out resource: modules/flyway/migration/V12__43_schema for billing.sql (filename: V12__43_schema for billing.sql)
+[debug] Filtering out resource: modules/flyway/migration/V13__187_schema for org_website_settings.sql (filename: V13__187_schema for org_website_settings.sql)
+[debug] Filtering out resource: modules/flyway/migration/V14__196_mind_map_published_course.sql (filename: V14__196_mind_map_published_course.sql)
+[debug] Filtering out resource: modules/flyway/migration/V15__197_site_settings_ammendment.sql (filename: V15__197_site_settings_ammendment.sql)
+[debug] Filtering out resource: modules/flyway/migration/V1__schema for organization.sql (filename: V1__schema for organization.sql)
+[debug] Filtering out resource: modules/flyway/migration/V2__schema for map.sql (filename: V2__schema for map.sql)
+[debug] Filtering out resource: modules/flyway/migration/V3__schema for flashcard.sql (filename: V3__schema for flashcard.sql)
+[debug] Filtering out resource: modules/flyway/migration/V4__INITIAL_DATA.sql (filename: V4__INITIAL_DATA.sql)
+[debug] Filtering out resource: modules/flyway/migration/V5__124_cards_due_fix.sql (filename: V5__124_cards_due_fix.sql)
+[debug] Filtering out resource: modules/flyway/migration/V6__126_card_due_fix.sql (filename: V6__126_card_due_fix.sql)
+[debug] Filtering out resource: modules/flyway/migration/V7__33_card_audio.sql (filename: V7__33_card_audio.sql)
+[debug] Filtering out resource: modules/flyway/migration/V8__34_card_markdown.sql (filename: V8__34_card_markdown.sql)
+[debug] Filtering out resource: modules/flyway/migration/V9__154_nodejs_flashcardtype.sql (filename: V9__154_nodejs_flashcardtype.sql)
+[info] Successfully validated 15 migrations (execution time 00:00.057s)
+[debug] Schema "public" already exists. Skipping schema creation.
+[info] Creating Schema History table: "public"."flyway_schema_history"
+[debug] Found statement at line 17: CREATE TABLE "public"."flyway_schema_history" (
+[debug]     "installed_rank" INT NOT NULL,
+[debug]     "version" VARCHAR(50),
+[debug]     "description" VARCHAR(200) NOT NULL,
+[debug]     "type" VARCHAR(20) NOT NULL,
+[debug]     "script" VARCHAR(1000) NOT NULL,
+[debug]     "checksum" INTEGER,
+[debug]     "installed_by" VARCHAR(100) NOT NULL,
+[debug]     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+[debug]     "execution_time" INTEGER NOT NULL,
+[debug]     "success" BOOLEAN NOT NULL
+[debug] )
+[debug] Found statement at line 29: ALTER TABLE "public"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+[debug] Found statement at line 31: CREATE INDEX "flyway_schema_history_s_idx" ON "public"."flyway_schema_history" ("success")
+[debug] Executing SQL: CREATE TABLE "public"."flyway_schema_history" (
+[debug]     "installed_rank" INT NOT NULL,
+[debug]     "version" VARCHAR(50),
+[debug]     "description" VARCHAR(200) NOT NULL,
+[debug]     "type" VARCHAR(20) NOT NULL,
+[debug]     "script" VARCHAR(1000) NOT NULL,
+[debug]     "checksum" INTEGER,
+[debug]     "installed_by" VARCHAR(100) NOT NULL,
+[debug]     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+[debug]     "execution_time" INTEGER NOT NULL,
+[debug]     "success" BOOLEAN NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE "public"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX "flyway_schema_history_s_idx" ON "public"."flyway_schema_history" ("success")
+[debug] Update Count: 0
+[debug] Schema History table "public"."flyway_schema_history" created.
+[info] Current version of schema "public": << Empty Schema >>
+[debug] Parsing V1__schema for organization.sql ...
+[debug] Found statement at line 1: create schema organization
+[debug] Found statement at line 3: create table organization.org_profile (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "name" VARCHAR NOT NULL UNIQUE,
+[debug]                                       "domain" VARCHAR NOT NULL UNIQUE,
+[debug]                                       "familyPlan" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 10: insert into organization.org_profile ("id", "name", "domain") values ('57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Mastery Path', 'masterypath.io')
+[debug] Found statement at line 12: create table organization.member_profile (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                 "firstName" VARCHAR NOT NULL,
+[debug]                                 "lastName" VARCHAR NOT NULL,
+[debug]                                 "avatarURL" VARCHAR NOT NULL,
+[debug]                                 "enabled" BOOLEAN NOT NULL
+[debug] )
+[debug] Found statement at line 20: create table organization.account (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                 "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                 "tokenSubject" VARCHAR NOT NULL UNIQUE,
+[debug]                                 "email" VARCHAR NOT NULL,
+[debug]                                 "enabled" BOOLEAN NOT NULL,
+[debug]                                 "created" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 29: create table organization.link_member (
+[debug]                                      "id" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                      "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                      CONSTRAINT link_member_no_dups UNIQUE  ("id", "orgID")
+[debug] )
+[debug] Found statement at line 35: create table organization.link_account (
+[debug]                                       "id" UUID NOT NULL REFERENCES organization.account("id"),
+[debug]                                       "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                       CONSTRAINT link_account_no_dups UNIQUE  ("id", "orgID")
+[debug] )
+[debug] Found statement at line 41: create table organization.login_time (
+[debug]                                    "id" UUID NOT NULL REFERENCES organization.account("id"),
+[debug]                                    "timestamp" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 46: create table organization.link_organization (
+[debug]                                          "id" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                          "orgMemberID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                          CONSTRAINT link_organization_no_dups UNIQUE  ("id", "orgMemberID")
+[debug] )
+[debug] Found statement at line 52: create table organization.config (
+[debug]                                      "id" UUID NOT NULL PRIMARY KEY REFERENCES organization.org_profile("id"),
+[debug]                                      "blog" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "contests" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "defaultLanguage" VARCHAR NOT NULL,
+[debug]                                      "mapDocumentationGeneration" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "marketingCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "marketingEngagementCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "problemBoard" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesAds" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesCertificates" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesCourses" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesFreeTrials" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberFeesActive" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberFeesStatic" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberships" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesOrganizations" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "supportTier" SMALLINT NOT NULL,
+[debug]                                      "trainingAnswerTimeTracking" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingBreakTime" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingComplianceEnforcement" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingComments" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageStudentSubmission" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageTimeTracking" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageUpvote" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingCorrectAnswerAnimation" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingCorrectAnswerSound" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingLearningPaths" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingMnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingQuotes" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingRankings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingReporting" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingRewardsProgram" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingSessionEndCelebration" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingSessionEndFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingStraightThruMode" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingStudyGoals" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingVirtualLabs" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "whiteLabeled" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 94: create table organization.role (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                    "roleName" VARCHAR NOT NULL,
+[debug]                                    "autoJoin" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogApprove" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogCreate" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogDelete" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageBlog" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageContests" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageMarketingCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationBilling" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationConfig" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationMembers" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationPermissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationWhitelabel" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageRewardsProgram" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesAds" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesCertificates" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesCourses" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesMemberships" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesOrganizations" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingBreakTime" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingComplianceEnforcement" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingQuotes" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingSessionSettings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageProblemBoard" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapApprove" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapCreate" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapCreateDocuments" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapDirectory" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapFork" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapMnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapModify" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapPermissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapShare" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapStats" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapTraining" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapTransfer" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapView" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "organizationInvite" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "organizationPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "trainingRankings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "trainingReporting" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 143: INSERT INTO organization.config (
+[debug]     "id",
+[debug]     "blog",
+[debug]     "contests",
+[debug]     "defaultLanguage",
+[debug]     "mapDocumentationGeneration",
+[debug]     "marketingCampaigns",
+[debug]     "marketingEngagementCampaigns",
+[debug]     "problemBoard",
+[debug]     "salesAds",
+[debug]     "salesCertificates",
+[debug]     "salesCourses",
+[debug]     "salesFreeTrials",
+[debug]     "salesMemberFeesActive",
+[debug]     "salesMemberFeesStatic",
+[debug]     "salesMemberships",
+[debug]     "salesOrganizations",
+[debug]     "supportTier",
+[debug]     "trainingAnswerTimeTracking",
+[debug]     "trainingBreakTime",
+[debug]     "trainingComplianceEnforcement",
+[debug]     "trainingComments",
+[debug]     "trainingContentPageStudentSubmission",
+[debug]     "trainingContentPageTimeTracking",
+[debug]     "trainingContentPageUpvote",
+[debug]     "trainingCorrectAnswerAnimation",
+[debug]     "trainingCorrectAnswerSound",
+[debug]     "trainingFeedback",
+[debug]     "trainingLearningPaths",
+[debug]     "trainingMnemonics",
+[debug]     "trainingQuotes",
+[debug]     "trainingRankings",
+[debug]     "trainingReporting",
+[debug]     "trainingRewardsProgram",
+[debug]     "trainingSessionEndCelebration",
+[debug]     "trainingSessionEndFeedback",
+[debug]     "trainingStraightThruMode",
+[debug]     "trainingStudyGoals",
+[debug]     "trainingVirtualLabs",
+[debug]     "whiteLabeled"
+[debug] ) VALUES (
+[debug]              '57d00d57-28de-410c-b1cf-d97c4ccba08d',
+[debug]              true,
+[debug]              true,
+[debug]              'en',
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              1,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true
+[debug]          )
+[debug] Found statement at line 225: create table organization.link_role (
+[debug]                              "id" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                              "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                              "roleID" UUID NOT NULL REFERENCES organization.role("id") ON DELETE CASCADE,
+[debug]                              CONSTRAINT link_role_no_dups UNIQUE  ("id", "roleID")
+[debug] )
+[debug] Found statement at line 232: create index member_login_time_memberID ON organization.login_time("id")
+[debug] Found statement at line 233: create index organization_member_orgID ON organization.link_member("orgID")
+[debug] Found statement at line 234: create index organization_member_memberID ON organization.link_member("id")
+[debug] Found statement at line 235: create index organization_account_orgID ON organization.link_account("orgID")
+[debug] Found statement at line 236: create index organization_account_memberID on organization.link_account("id")
+[info] Migrating schema "public" to version 1 - schema for organization
+[debug] Executing SQL: create schema organization
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.org_profile (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "name" VARCHAR NOT NULL UNIQUE,
+[debug]                                       "domain" VARCHAR NOT NULL UNIQUE,
+[debug]                                       "familyPlan" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: insert into organization.org_profile ("id", "name", "domain") values ('57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Mastery Path', 'masterypath.io')
+[debug] Update Count: 1
+[debug] Executing SQL: create table organization.member_profile (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                 "firstName" VARCHAR NOT NULL,
+[debug]                                 "lastName" VARCHAR NOT NULL,
+[debug]                                 "avatarURL" VARCHAR NOT NULL,
+[debug]                                 "enabled" BOOLEAN NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.account (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                 "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                 "tokenSubject" VARCHAR NOT NULL UNIQUE,
+[debug]                                 "email" VARCHAR NOT NULL,
+[debug]                                 "enabled" BOOLEAN NOT NULL,
+[debug]                                 "created" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.link_member (
+[debug]                                      "id" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                      "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                      CONSTRAINT link_member_no_dups UNIQUE  ("id", "orgID")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.link_account (
+[debug]                                       "id" UUID NOT NULL REFERENCES organization.account("id"),
+[debug]                                       "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                       CONSTRAINT link_account_no_dups UNIQUE  ("id", "orgID")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.login_time (
+[debug]                                    "id" UUID NOT NULL REFERENCES organization.account("id"),
+[debug]                                    "timestamp" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.link_organization (
+[debug]                                          "id" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                          "orgMemberID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                          CONSTRAINT link_organization_no_dups UNIQUE  ("id", "orgMemberID")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.config (
+[debug]                                      "id" UUID NOT NULL PRIMARY KEY REFERENCES organization.org_profile("id"),
+[debug]                                      "blog" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "contests" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "defaultLanguage" VARCHAR NOT NULL,
+[debug]                                      "mapDocumentationGeneration" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "marketingCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "marketingEngagementCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "problemBoard" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesAds" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesCertificates" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesCourses" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesFreeTrials" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberFeesActive" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberFeesStatic" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesMemberships" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "salesOrganizations" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "supportTier" SMALLINT NOT NULL,
+[debug]                                      "trainingAnswerTimeTracking" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingBreakTime" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingComplianceEnforcement" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingComments" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageStudentSubmission" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageTimeTracking" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingContentPageUpvote" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingCorrectAnswerAnimation" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingCorrectAnswerSound" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingLearningPaths" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingMnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingQuotes" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingRankings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingReporting" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingRewardsProgram" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingSessionEndCelebration" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingSessionEndFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingStraightThruMode" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingStudyGoals" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "trainingVirtualLabs" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                      "whiteLabeled" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.role (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                    "roleName" VARCHAR NOT NULL,
+[debug]                                    "autoJoin" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogApprove" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogCreate" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogDelete" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "blogPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageBlog" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageContests" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageMarketingCampaigns" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationBilling" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationConfig" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationMembers" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationPermissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageOrganizationWhitelabel" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageRewardsProgram" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesAds" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesCertificates" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesCourses" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesMemberships" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageSalesOrganizations" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingBreakTime" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingComplianceEnforcement" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingQuotes" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageTrainingSessionSettings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "manageProblemBoard" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapApprove" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapCreate" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapCreateDocuments" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapDirectory" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapFeedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapFork" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapMnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapModify" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapPermissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapShare" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapStats" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapTraining" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapTransfer" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "mapView" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "organizationInvite" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "organizationPublish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "trainingRankings" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]                                    "trainingReporting" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: INSERT INTO organization.config (
+[debug]     "id",
+[debug]     "blog",
+[debug]     "contests",
+[debug]     "defaultLanguage",
+[debug]     "mapDocumentationGeneration",
+[debug]     "marketingCampaigns",
+[debug]     "marketingEngagementCampaigns",
+[debug]     "problemBoard",
+[debug]     "salesAds",
+[debug]     "salesCertificates",
+[debug]     "salesCourses",
+[debug]     "salesFreeTrials",
+[debug]     "salesMemberFeesActive",
+[debug]     "salesMemberFeesStatic",
+[debug]     "salesMemberships",
+[debug]     "salesOrganizations",
+[debug]     "supportTier",
+[debug]     "trainingAnswerTimeTracking",
+[debug]     "trainingBreakTime",
+[debug]     "trainingComplianceEnforcement",
+[debug]     "trainingComments",
+[debug]     "trainingContentPageStudentSubmission",
+[debug]     "trainingContentPageTimeTracking",
+[debug]     "trainingContentPageUpvote",
+[debug]     "trainingCorrectAnswerAnimation",
+[debug]     "trainingCorrectAnswerSound",
+[debug]     "trainingFeedback",
+[debug]     "trainingLearningPaths",
+[debug]     "trainingMnemonics",
+[debug]     "trainingQuotes",
+[debug]     "trainingRankings",
+[debug]     "trainingReporting",
+[debug]     "trainingRewardsProgram",
+[debug]     "trainingSessionEndCelebration",
+[debug]     "trainingSessionEndFeedback",
+[debug]     "trainingStraightThruMode",
+[debug]     "trainingStudyGoals",
+[debug]     "trainingVirtualLabs",
+[debug]     "whiteLabeled"
+[debug] ) VALUES (
+[debug]              '57d00d57-28de-410c-b1cf-d97c4ccba08d',
+[debug]              true,
+[debug]              true,
+[debug]              'en',
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              1,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true,
+[debug]              true
+[debug]          )
+[debug] Update Count: 1
+[debug] Executing SQL: create table organization.link_role (
+[debug]                              "id" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                              "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                              "roleID" UUID NOT NULL REFERENCES organization.role("id") ON DELETE CASCADE,
+[debug]                              CONSTRAINT link_role_no_dups UNIQUE  ("id", "roleID")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create index member_login_time_memberID ON organization.login_time("id")
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_member_orgID ON organization.link_member("orgID")
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_member_memberID ON organization.link_member("id")
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_account_orgID ON organization.link_account("orgID")
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_account_memberID on organization.link_account("id")
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 1 - schema for organization
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V2__schema for map.sql ...
+[debug] Found statement at line 1: CREATE SCHEMA mind_map
+[debug] Found statement at line 3: CREATE TABLE mind_map.mind_map (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "published" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "icon" VARCHAR (255) DEFAULT NULL,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "name" VARCHAR (255) NOT NULL,
+[debug]     "mode" VARCHAR (12) NOT NULL,
+[debug]     "description" TEXT DEFAULT NULL,
+[debug]     "cost" FLOAT CHECK (cost > 0) DEFAULT NULL
+[debug] )
+[debug] Found statement at line 14: CREATE INDEX map_id_prop ON mind_map.mind_map("id")
+[debug] Found statement at line 16: CREATE TABLE mind_map.node (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "nodeNumber" SMALLINT NOT NULL,
+[debug]     "parentID" UUID DEFAULT NULL REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "segmentID" UUID NOT NULL,
+[debug]     "path" TEXT NOT NULL,
+[debug]     "order" FLOAT NOT NULL,
+[debug]     "name" VARCHAR (255) NOT NULL,
+[debug]     "type" VARCHAR (40) NOT NULL,
+[debug]     "root" SMALLINT DEFAULT NULL,
+[debug]     "disabled" BOOLEAN DEFAULT FALSE NOT NULL,
+[debug]     CONSTRAINT map_nodeNumber UNIQUE  ("segmentID", "nodeNumber"),
+[debug]     CONSTRAINT parent_order UNIQUE  ("parentID", "order"),
+[debug]     CONSTRAINT title_parent UNIQUE  ("parentID", "name")
+[debug] )
+[debug] Found statement at line 33: CREATE TABLE mind_map.node_attributes (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "nodeID" UUID NOT NULL REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     "collapsed" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 40: CREATE TABLE mind_map.map_rights (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "name" VARCHAR (40) NOT NULL,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "admin" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "feedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "mnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "modify" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "permissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "publish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "share" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "stats" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "training" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "transfer" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "view" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 57: CREATE TABLE mind_map.link_map_member (
+[debug]     "id" UUID NOT NULL REFERENCES mind_map.map_rights("id") ON DELETE CASCADE,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     CONSTRAINT link_maprights_no_dups UNIQUE  ("id", "profileID")
+[debug] )
+[debug] Found statement at line 64: CREATE TABLE mind_map.post (
+[debug]     "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "markdown" TEXT NOT NULL,
+[debug]     "html" TEXT NOT NULL
+[debug] )
+[debug] Found statement at line 71: CREATE TABLE mind_map.post_read (
+[debug]     "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.post("id") ON DELETE CASCADE,
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     "timeRead" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 77: create table organization.role_invite (
+[debug]     "id" UUID PRIMARY KEY NOT NULL,
+[debug]     "roleID" UUID NOT NULL REFERENCES organization.role("id") ON DELETE CASCADE,
+[debug]     "mapRightsID" UUID DEFAULT NULL REFERENCES mind_map.map_rights("id") ON DELETE CASCADE,
+[debug]     "expires" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 84: CREATE INDEX parent_id ON mind_map.node("parentID")
+[debug] Found statement at line 85: CREATE INDEX map_id ON mind_map.node("mapID")
+[debug] Found statement at line 86: CREATE INDEX root_node ON mind_map.node("root")
+[debug] Found statement at line 87: CREATE INDEX top_map_id ON mind_map.node("segmentID")
+[debug] Found statement at line 88: CREATE INDEX node_id ON mind_map.node("id")
+[info] Migrating schema "public" to version 2 - schema for map
+[debug] Executing SQL: CREATE SCHEMA mind_map
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.mind_map (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "published" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "icon" VARCHAR (255) DEFAULT NULL,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "name" VARCHAR (255) NOT NULL,
+[debug]     "mode" VARCHAR (12) NOT NULL,
+[debug]     "description" TEXT DEFAULT NULL,
+[debug]     "cost" FLOAT CHECK (cost > 0) DEFAULT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX map_id_prop ON mind_map.mind_map("id")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.node (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "nodeNumber" SMALLINT NOT NULL,
+[debug]     "parentID" UUID DEFAULT NULL REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "segmentID" UUID NOT NULL,
+[debug]     "path" TEXT NOT NULL,
+[debug]     "order" FLOAT NOT NULL,
+[debug]     "name" VARCHAR (255) NOT NULL,
+[debug]     "type" VARCHAR (40) NOT NULL,
+[debug]     "root" SMALLINT DEFAULT NULL,
+[debug]     "disabled" BOOLEAN DEFAULT FALSE NOT NULL,
+[debug]     CONSTRAINT map_nodeNumber UNIQUE  ("segmentID", "nodeNumber"),
+[debug]     CONSTRAINT parent_order UNIQUE  ("parentID", "order"),
+[debug]     CONSTRAINT title_parent UNIQUE  ("parentID", "name")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.node_attributes (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "nodeID" UUID NOT NULL REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     "collapsed" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.map_rights (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "name" VARCHAR (40) NOT NULL,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "admin" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "feedback" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "mnemonics" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "modify" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "permissions" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "publish" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "share" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "stats" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "training" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "transfer" BOOLEAN NOT NULL DEFAULT FALSE,
+[debug]     "view" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.link_map_member (
+[debug]     "id" UUID NOT NULL REFERENCES mind_map.map_rights("id") ON DELETE CASCADE,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     CONSTRAINT link_maprights_no_dups UNIQUE  ("id", "profileID")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.post (
+[debug]     "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]     "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]     "markdown" TEXT NOT NULL,
+[debug]     "html" TEXT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE mind_map.post_read (
+[debug]     "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.post("id") ON DELETE CASCADE,
+[debug]     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]     "timeRead" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table organization.role_invite (
+[debug]     "id" UUID PRIMARY KEY NOT NULL,
+[debug]     "roleID" UUID NOT NULL REFERENCES organization.role("id") ON DELETE CASCADE,
+[debug]     "mapRightsID" UUID DEFAULT NULL REFERENCES mind_map.map_rights("id") ON DELETE CASCADE,
+[debug]     "expires" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX parent_id ON mind_map.node("parentID")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX map_id ON mind_map.node("mapID")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX root_node ON mind_map.node("root")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX top_map_id ON mind_map.node("segmentID")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX node_id ON mind_map.node("id")
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 2 - schema for map
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V3__schema for flashcard.sql ...
+[debug] Found statement at line 1: CREATE SCHEMA flashcard
+[debug] Found statement at line 3: CREATE TABLE flashcard.flashcard_type(
+[debug]                                          "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                          "cardType" VARCHAR (40) NOT NULL,
+[debug]                                          "name" VARCHAR (20) NOT NULL,
+[debug]                                          "commonName" VARCHAR (40) NOT NULL,
+[debug]                                          "description" TEXT DEFAULT NULL,
+[debug]                                          "config" TEXT DEFAULT NULL,
+[debug]                                          CONSTRAINT flashcard_types_no_dups UNIQUE  ("name")
+[debug] )
+[debug] Found statement at line 13: CREATE TABLE flashcard.card (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]                                 "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]                                 "flashcardTypeID" UUID NOT NULL REFERENCES flashcard.flashcard_type("id"),
+[debug]                                 "question" TEXT NOT NULL
+[debug] )
+[debug] Found statement at line 20: CREATE INDEX basic_flashcard_id ON flashcard.card("id")
+[debug] Found statement at line 22: CREATE TABLE flashcard.code_exercise(
+[debug]                                         "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                         "explanation" TEXT NOT NULL,
+[debug]                                         "explanationHTML" TEXT NOT NULL,
+[debug]                                         "template" TEXT NOT NULL,
+[debug]                                         "test" TEXT NOT NULL,
+[debug]                                         "solution" TEXT NOT NULL
+[debug] )
+[debug] Found statement at line 31: CREATE TABLE flashcard.card_due (
+[debug]                                     "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                     "ef" DOUBLE PRECISION NOT NULL,
+[debug]                                     "interval" INTEGER NOT NULL,
+[debug]                                     "lastAnswerTime" BIGINT NOT NULL,
+[debug]                                     "due" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 39: CREATE TABLE flashcard.answer_choice (
+[debug]                                          "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                          "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                          "answer" TEXT NOT NULL,
+[debug]                                          "correct" BOOLEAN NOT NULL
+[debug] )
+[debug] Found statement at line 46: CREATE TABLE flashcard.answer_log (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                       "correct" BOOLEAN NOT NULL,
+[debug]                                       "time" BIGINT NOT NULL,
+[debug]                                       "elapsedTime" INTEGER NOT NULL
+[debug] )
+[info] Migrating schema "public" to version 3 - schema for flashcard
+[debug] Executing SQL: CREATE SCHEMA flashcard
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.flashcard_type(
+[debug]                                          "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                          "cardType" VARCHAR (40) NOT NULL,
+[debug]                                          "name" VARCHAR (20) NOT NULL,
+[debug]                                          "commonName" VARCHAR (40) NOT NULL,
+[debug]                                          "description" TEXT DEFAULT NULL,
+[debug]                                          "config" TEXT DEFAULT NULL,
+[debug]                                          CONSTRAINT flashcard_types_no_dups UNIQUE  ("name")
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.card (
+[debug]                                 "id" UUID NOT NULL PRIMARY KEY REFERENCES mind_map.node("id") ON DELETE CASCADE,
+[debug]                                 "mapID" UUID NOT NULL REFERENCES mind_map.mind_map("id") ON DELETE CASCADE,
+[debug]                                 "flashcardTypeID" UUID NOT NULL REFERENCES flashcard.flashcard_type("id"),
+[debug]                                 "question" TEXT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX basic_flashcard_id ON flashcard.card("id")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.code_exercise(
+[debug]                                         "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                         "explanation" TEXT NOT NULL,
+[debug]                                         "explanationHTML" TEXT NOT NULL,
+[debug]                                         "template" TEXT NOT NULL,
+[debug]                                         "test" TEXT NOT NULL,
+[debug]                                         "solution" TEXT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.card_due (
+[debug]                                     "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                     "ef" DOUBLE PRECISION NOT NULL,
+[debug]                                     "interval" INTEGER NOT NULL,
+[debug]                                     "lastAnswerTime" BIGINT NOT NULL,
+[debug]                                     "due" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.answer_choice (
+[debug]                                          "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                          "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                          "answer" TEXT NOT NULL,
+[debug]                                          "correct" BOOLEAN NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.answer_log (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                       "correct" BOOLEAN NOT NULL,
+[debug]                                       "time" BIGINT NOT NULL,
+[debug]                                       "elapsedTime" INTEGER NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 3 - schema for flashcard
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V4__INITIAL_DATA.sql ...
+[debug] Found statement at line 3: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description")
+[debug] VALUES ('8e5918f8-89bf-4371-9999-3856d63700ac', 'basic', 'standard', 'Standard', 'Standard front/back flashcard with multiple choice testing capability.')
+[debug] Found statement at line 5: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description", "config")
+[debug] VALUES (
+[debug]            '8e5918f8-89bf-4371-9999-3856d63700ab',
+[debug]            'code_exercise',
+[debug]            'code_exercise_scala',
+[debug]            'Scala Code Exercise',
+[debug]            'Scala programming flashcard',
+[debug]            '{"docker_image": "masterypath.io/scalatest", "language": "scala"}'
+[debug]        )
+[debug] Found statement at line 16: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('4527ed80-6465-45a6-a463-d0282ac0f53d', 'Anthony', 'Michaelson', '', true)
+[debug] Found statement at line 19: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('2366b551-d511-4cba-b5e5-b73027b8d5e2', '4527ed80-6465-45a6-a463-d0282ac0f53d', 'auth0|5e9d101f68010d0c5ab9668f', 'customersupport@masterypath.io', 'true', '1591134004')
+[debug] Found statement at line 22: INSERT INTO organization.link_account ("id", "orgID")
+[debug] VALUES('2366b551-d511-4cba-b5e5-b73027b8d5e2', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Found statement at line 25: INSERT INTO organization.link_member ("id", "orgID")
+[debug] VALUES('4527ed80-6465-45a6-a463-d0282ac0f53d', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Found statement at line 29: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('f7207989-b62b-43b2-8eff-489e855067af', 'User1', 'Michaelson', '', true)
+[debug] Found statement at line 32: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('1b892709-cabd-485b-aa18-fcaca932b00d', 'f7207989-b62b-43b2-8eff-489e855067af', 'auth0|5ec8b0ee6784c00caaa90891', 'test_user1@masterypath.io', 'true', '1591134023')
+[debug] Found statement at line 35: INSERT INTO organization.link_account ("id", "orgID")
+[debug] VALUES('1b892709-cabd-485b-aa18-fcaca932b00d', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Found statement at line 38: INSERT INTO organization.link_member ("id", "orgID")
+[debug] VALUES('f7207989-b62b-43b2-8eff-489e855067af', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Found statement at line 42: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('fea1fd3e-85cc-43af-b62f-25ec0419620f', 'Bob', 'Michaelson', '', true)
+[debug] Found statement at line 45: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('f12413e7-c276-4cc5-b662-3419210250b8', 'fea1fd3e-85cc-43af-b62f-25ec0419620f', 'bob', 'bob@masterypath.io', 'true', '1591134023')
+[debug] Found statement at line 48: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin",
+[debug] "blogApprove",
+[debug] "blogCreate",
+[debug] "blogDelete",
+[debug] "blogPublish",
+[debug] "manageBlog",
+[debug] "manageContests",
+[debug] "manageMarketingCampaigns",
+[debug] "manageOrganizationBilling",
+[debug] "manageOrganizationConfig",
+[debug] "manageOrganizationMembers",
+[debug] "manageOrganizationPermissions",
+[debug] "manageOrganizationWhitelabel",
+[debug] "manageRewardsProgram",
+[debug] "manageSalesAds",
+[debug] "manageSalesCertificates",
+[debug] "manageSalesCourses",
+[debug] "manageSalesMemberships",
+[debug] "manageSalesOrganizations",
+[debug] "manageTrainingBreakTime",
+[debug] "manageTrainingComplianceEnforcement",
+[debug] "manageTrainingQuotes",
+[debug] "manageTrainingSessionSettings",
+[debug] "manageProblemBoard",
+[debug] "mapApprove",
+[debug] "mapCreate",
+[debug] "mapCreateDocuments",
+[debug] "mapDirectory",
+[debug] "mapFeedback",
+[debug] "mapFork",
+[debug] "mapMnemonics",
+[debug] "mapModify",
+[debug] "mapPermissions",
+[debug] "mapPublish",
+[debug] "mapShare",
+[debug] "mapStats",
+[debug] "mapTraining",
+[debug] "mapTransfer",
+[debug] "mapView",
+[debug] "organizationInvite",
+[debug] "organizationPublish",
+[debug] "trainingRankings",
+[debug] "trainingReporting"
+[debug] )
+[debug] VALUES('77a4090c-840d-4428-ae68-fd2a7dd781d9', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Admin', false, true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true)
+[debug] Found statement at line 135: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin", "blogApprove",
+[debug]                                "blogCreate",
+[debug]                                "blogDelete",
+[debug]                                "blogPublish",
+[debug]                                "manageBlog",
+[debug]                                "manageContests",
+[debug]                                "manageMarketingCampaigns",
+[debug]                                "manageOrganizationBilling",
+[debug]                                "manageOrganizationConfig",
+[debug]                                "manageOrganizationMembers",
+[debug]                                "manageOrganizationPermissions",
+[debug]                                "manageOrganizationWhitelabel",
+[debug]                                "manageRewardsProgram",
+[debug]                                "manageSalesAds",
+[debug]                                "manageSalesCertificates",
+[debug]                                "manageSalesCourses",
+[debug]                                "manageSalesMemberships",
+[debug]                                "manageSalesOrganizations",
+[debug]                                "manageTrainingBreakTime",
+[debug]                                "manageTrainingComplianceEnforcement",
+[debug]                                "manageTrainingQuotes",
+[debug]                                "manageTrainingSessionSettings",
+[debug]                                "manageProblemBoard",
+[debug]                                "mapApprove",
+[debug]                                "mapCreate",
+[debug]                                "mapCreateDocuments",
+[debug]                                "mapDirectory",
+[debug]                                "mapFeedback",
+[debug]                                "mapFork",
+[debug]                                "mapMnemonics",
+[debug]                                "mapModify",
+[debug]                                "mapPermissions",
+[debug]                                "mapPublish",
+[debug]                                "mapShare",
+[debug]                                "mapStats",
+[debug]                                "mapTraining",
+[debug]                                "mapTransfer",
+[debug]                                "mapView",
+[debug]                                "organizationInvite",
+[debug]                                "organizationPublish",
+[debug]                                "trainingRankings",
+[debug]                                "trainingReporting")
+[debug] VALUES('085a35af-5436-4afb-a9b9-f9d3115053fe', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Bunk', true, false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false)
+[debug] Found statement at line 220: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin", "blogApprove",
+[debug]                                "blogCreate",
+[debug]                                "blogDelete",
+[debug]                                "blogPublish",
+[debug]                                "manageBlog",
+[debug]                                "manageContests",
+[debug]                                "manageMarketingCampaigns",
+[debug]                                "manageOrganizationBilling",
+[debug]                                "manageOrganizationConfig",
+[debug]                                "manageOrganizationMembers",
+[debug]                                "manageOrganizationPermissions",
+[debug]                                "manageOrganizationWhitelabel",
+[debug]                                "manageRewardsProgram",
+[debug]                                "manageSalesAds",
+[debug]                                "manageSalesCertificates",
+[debug]                                "manageSalesCourses",
+[debug]                                "manageSalesMemberships",
+[debug]                                "manageSalesOrganizations",
+[debug]                                "manageTrainingBreakTime",
+[debug]                                "manageTrainingComplianceEnforcement",
+[debug]                                "manageTrainingQuotes",
+[debug]                                "manageTrainingSessionSettings",
+[debug]                                "manageProblemBoard",
+[debug]                                "mapApprove",
+[debug]                                "mapCreate",
+[debug]                                "mapCreateDocuments",
+[debug]                                "mapDirectory",
+[debug]                                "mapFeedback",
+[debug]                                "mapFork",
+[debug]                                "mapMnemonics",
+[debug]                                "mapModify",
+[debug]                                "mapPermissions",
+[debug]                                "mapPublish",
+[debug]                                "mapShare",
+[debug]                                "mapStats",
+[debug]                                "mapTraining",
+[debug]                                "mapTransfer",
+[debug]                                "mapView",
+[debug]                                "organizationInvite",
+[debug]                                "organizationPublish",
+[debug]                                "trainingRankings",
+[debug]                                "trainingReporting")
+[debug] VALUES('f1a76613-b523-485c-9d5a-3a7a0879b946', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'All Users', true, false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false)
+[debug] Found statement at line 305: INSERT INTO organization.link_role ("id", "orgID", "roleID") VALUES ('4527ed80-6465-45a6-a463-d0282ac0f53d', '57d00d57-28de-410c-b1cf-d97c4ccba08d', '77a4090c-840d-4428-ae68-fd2a7dd781d9')
+[debug] Found statement at line 306: INSERT INTO organization.link_role ("id", "orgID", "roleID") VALUES ('f7207989-b62b-43b2-8eff-489e855067af', '57d00d57-28de-410c-b1cf-d97c4ccba08d', '085a35af-5436-4afb-a9b9-f9d3115053fe')
+[info] Migrating schema "public" to version 4 - INITIAL DATA
+[debug] Executing SQL: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description")
+[debug] VALUES ('8e5918f8-89bf-4371-9999-3856d63700ac', 'basic', 'standard', 'Standard', 'Standard front/back flashcard with multiple choice testing capability.')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description", "config")
+[debug] VALUES (
+[debug]            '8e5918f8-89bf-4371-9999-3856d63700ab',
+[debug]            'code_exercise',
+[debug]            'code_exercise_scala',
+[debug]            'Scala Code Exercise',
+[debug]            'Scala programming flashcard',
+[debug]            '{"docker_image": "masterypath.io/scalatest", "language": "scala"}'
+[debug]        )
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('4527ed80-6465-45a6-a463-d0282ac0f53d', 'Anthony', 'Michaelson', '', true)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('2366b551-d511-4cba-b5e5-b73027b8d5e2', '4527ed80-6465-45a6-a463-d0282ac0f53d', 'auth0|5e9d101f68010d0c5ab9668f', 'customersupport@masterypath.io', 'true', '1591134004')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_account ("id", "orgID")
+[debug] VALUES('2366b551-d511-4cba-b5e5-b73027b8d5e2', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_member ("id", "orgID")
+[debug] VALUES('4527ed80-6465-45a6-a463-d0282ac0f53d', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('f7207989-b62b-43b2-8eff-489e855067af', 'User1', 'Michaelson', '', true)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('1b892709-cabd-485b-aa18-fcaca932b00d', 'f7207989-b62b-43b2-8eff-489e855067af', 'auth0|5ec8b0ee6784c00caaa90891', 'test_user1@masterypath.io', 'true', '1591134023')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_account ("id", "orgID")
+[debug] VALUES('1b892709-cabd-485b-aa18-fcaca932b00d', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_member ("id", "orgID")
+[debug] VALUES('f7207989-b62b-43b2-8eff-489e855067af', '57d00d57-28de-410c-b1cf-d97c4ccba08d')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.member_profile ("id", "firstName", "lastName", "avatarURL", "enabled")
+[debug] VALUES('fea1fd3e-85cc-43af-b62f-25ec0419620f', 'Bob', 'Michaelson', '', true)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.account ("id", "profileID", "tokenSubject", "email", "enabled", "created")
+[debug] VALUES('f12413e7-c276-4cc5-b662-3419210250b8', 'fea1fd3e-85cc-43af-b62f-25ec0419620f', 'bob', 'bob@masterypath.io', 'true', '1591134023')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin",
+[debug] "blogApprove",
+[debug] "blogCreate",
+[debug] "blogDelete",
+[debug] "blogPublish",
+[debug] "manageBlog",
+[debug] "manageContests",
+[debug] "manageMarketingCampaigns",
+[debug] "manageOrganizationBilling",
+[debug] "manageOrganizationConfig",
+[debug] "manageOrganizationMembers",
+[debug] "manageOrganizationPermissions",
+[debug] "manageOrganizationWhitelabel",
+[debug] "manageRewardsProgram",
+[debug] "manageSalesAds",
+[debug] "manageSalesCertificates",
+[debug] "manageSalesCourses",
+[debug] "manageSalesMemberships",
+[debug] "manageSalesOrganizations",
+[debug] "manageTrainingBreakTime",
+[debug] "manageTrainingComplianceEnforcement",
+[debug] "manageTrainingQuotes",
+[debug] "manageTrainingSessionSettings",
+[debug] "manageProblemBoard",
+[debug] "mapApprove",
+[debug] "mapCreate",
+[debug] "mapCreateDocuments",
+[debug] "mapDirectory",
+[debug] "mapFeedback",
+[debug] "mapFork",
+[debug] "mapMnemonics",
+[debug] "mapModify",
+[debug] "mapPermissions",
+[debug] "mapPublish",
+[debug] "mapShare",
+[debug] "mapStats",
+[debug] "mapTraining",
+[debug] "mapTransfer",
+[debug] "mapView",
+[debug] "organizationInvite",
+[debug] "organizationPublish",
+[debug] "trainingRankings",
+[debug] "trainingReporting"
+[debug] )
+[debug] VALUES('77a4090c-840d-4428-ae68-fd2a7dd781d9', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Admin', false, true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true,
+[debug]        true)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin", "blogApprove",
+[debug]                                "blogCreate",
+[debug]                                "blogDelete",
+[debug]                                "blogPublish",
+[debug]                                "manageBlog",
+[debug]                                "manageContests",
+[debug]                                "manageMarketingCampaigns",
+[debug]                                "manageOrganizationBilling",
+[debug]                                "manageOrganizationConfig",
+[debug]                                "manageOrganizationMembers",
+[debug]                                "manageOrganizationPermissions",
+[debug]                                "manageOrganizationWhitelabel",
+[debug]                                "manageRewardsProgram",
+[debug]                                "manageSalesAds",
+[debug]                                "manageSalesCertificates",
+[debug]                                "manageSalesCourses",
+[debug]                                "manageSalesMemberships",
+[debug]                                "manageSalesOrganizations",
+[debug]                                "manageTrainingBreakTime",
+[debug]                                "manageTrainingComplianceEnforcement",
+[debug]                                "manageTrainingQuotes",
+[debug]                                "manageTrainingSessionSettings",
+[debug]                                "manageProblemBoard",
+[debug]                                "mapApprove",
+[debug]                                "mapCreate",
+[debug]                                "mapCreateDocuments",
+[debug]                                "mapDirectory",
+[debug]                                "mapFeedback",
+[debug]                                "mapFork",
+[debug]                                "mapMnemonics",
+[debug]                                "mapModify",
+[debug]                                "mapPermissions",
+[debug]                                "mapPublish",
+[debug]                                "mapShare",
+[debug]                                "mapStats",
+[debug]                                "mapTraining",
+[debug]                                "mapTransfer",
+[debug]                                "mapView",
+[debug]                                "organizationInvite",
+[debug]                                "organizationPublish",
+[debug]                                "trainingRankings",
+[debug]                                "trainingReporting")
+[debug] VALUES('085a35af-5436-4afb-a9b9-f9d3115053fe', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'Bunk', true, false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.role ("id", "orgID", "roleName", "autoJoin", "blogApprove",
+[debug]                                "blogCreate",
+[debug]                                "blogDelete",
+[debug]                                "blogPublish",
+[debug]                                "manageBlog",
+[debug]                                "manageContests",
+[debug]                                "manageMarketingCampaigns",
+[debug]                                "manageOrganizationBilling",
+[debug]                                "manageOrganizationConfig",
+[debug]                                "manageOrganizationMembers",
+[debug]                                "manageOrganizationPermissions",
+[debug]                                "manageOrganizationWhitelabel",
+[debug]                                "manageRewardsProgram",
+[debug]                                "manageSalesAds",
+[debug]                                "manageSalesCertificates",
+[debug]                                "manageSalesCourses",
+[debug]                                "manageSalesMemberships",
+[debug]                                "manageSalesOrganizations",
+[debug]                                "manageTrainingBreakTime",
+[debug]                                "manageTrainingComplianceEnforcement",
+[debug]                                "manageTrainingQuotes",
+[debug]                                "manageTrainingSessionSettings",
+[debug]                                "manageProblemBoard",
+[debug]                                "mapApprove",
+[debug]                                "mapCreate",
+[debug]                                "mapCreateDocuments",
+[debug]                                "mapDirectory",
+[debug]                                "mapFeedback",
+[debug]                                "mapFork",
+[debug]                                "mapMnemonics",
+[debug]                                "mapModify",
+[debug]                                "mapPermissions",
+[debug]                                "mapPublish",
+[debug]                                "mapShare",
+[debug]                                "mapStats",
+[debug]                                "mapTraining",
+[debug]                                "mapTransfer",
+[debug]                                "mapView",
+[debug]                                "organizationInvite",
+[debug]                                "organizationPublish",
+[debug]                                "trainingRankings",
+[debug]                                "trainingReporting")
+[debug] VALUES('f1a76613-b523-485c-9d5a-3a7a0879b946', '57d00d57-28de-410c-b1cf-d97c4ccba08d', 'All Users', true, false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        true,
+[debug]        false,
+[debug]        false,
+[debug]        false,
+[debug]        false)
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_role ("id", "orgID", "roleID") VALUES ('4527ed80-6465-45a6-a463-d0282ac0f53d', '57d00d57-28de-410c-b1cf-d97c4ccba08d', '77a4090c-840d-4428-ae68-fd2a7dd781d9')
+[debug] Update Count: 1
+[debug] Executing SQL: INSERT INTO organization.link_role ("id", "orgID", "roleID") VALUES ('f7207989-b62b-43b2-8eff-489e855067af', '57d00d57-28de-410c-b1cf-d97c4ccba08d', '085a35af-5436-4afb-a9b9-f9d3115053fe')
+[debug] Update Count: 1
+[debug] Successfully completed migration of schema "public" to version 4 - INITIAL DATA
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V5__124_cards_due_fix.sql ...
+[debug] Found statement at line 2: DROP TABLE flashcard.card_due
+[debug] Found statement at line 3: CREATE TABLE flashcard.card_due (
+[debug]                                     "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                     "ef" DOUBLE PRECISION NOT NULL,
+[debug]                                     "interval" INTEGER NOT NULL,
+[debug]                                     "lastAnswerTime" BIGINT NOT NULL,
+[debug]                                     "due" BIGINT NOT NULL
+[debug] )
+[debug] Found statement at line 12: DROP TABLE flashcard.answer_log
+[debug] Found statement at line 13: CREATE TABLE flashcard.answer_log (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                       "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                       "correct" BOOLEAN NOT NULL,
+[debug]                                       "time" BIGINT NOT NULL,
+[debug]                                       "elapsedTime" INTEGER NOT NULL
+[debug] )
+[info] Migrating schema "public" to version 5 - 124 cards due fix
+[debug] Executing SQL: DROP TABLE flashcard.card_due
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.card_due (
+[debug]                                     "id" UUID NOT NULL PRIMARY KEY REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                     "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                     "ef" DOUBLE PRECISION NOT NULL,
+[debug]                                     "interval" INTEGER NOT NULL,
+[debug]                                     "lastAnswerTime" BIGINT NOT NULL,
+[debug]                                     "due" BIGINT NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: DROP TABLE flashcard.answer_log
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE flashcard.answer_log (
+[debug]                                       "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                       "profileID" UUID NOT NULL REFERENCES organization.member_profile("id"),
+[debug]                                       "cardID" UUID NOT NULL REFERENCES flashcard.card("id") ON DELETE CASCADE,
+[debug]                                       "correct" BOOLEAN NOT NULL,
+[debug]                                       "time" BIGINT NOT NULL,
+[debug]                                       "elapsedTime" INTEGER NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 5 - 124 cards due fix
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V6__126_card_due_fix.sql ...
+[debug] Found statement at line 1: ALTER TABLE flashcard.card_due DROP CONSTRAINT card_due_pkey
+[debug] Found statement at line 2: ALTER TABLE flashcard.card_due ADD CONSTRAINT card_due_pkey PRIMARY KEY ("id", "profileID")
+[info] Migrating schema "public" to version 6 - 126 card due fix
+[debug] Executing SQL: ALTER TABLE flashcard.card_due DROP CONSTRAINT card_due_pkey
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE flashcard.card_due ADD CONSTRAINT card_due_pkey PRIMARY KEY ("id", "profileID")
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 6 - 126 card due fix
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V7__33_card_audio.sql ...
+[debug] Found statement at line 1: ALTER TABLE flashcard.card ADD COLUMN audio VARCHAR(255) DEFAULT NULL
+[info] Migrating schema "public" to version 7 - 33 card audio
+[debug] Executing SQL: ALTER TABLE flashcard.card ADD COLUMN audio VARCHAR(255) DEFAULT NULL
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 7 - 33 card audio
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V8__34_card_markdown.sql ...
+[debug] Found statement at line 1: ALTER TABLE flashcard.card ADD COLUMN markdown TEXT NOT NULL default ''
+[debug] Found statement at line 2: ALTER TABLE flashcard.card ADD COLUMN markdown_html TEXT NOT NULL default ''
+[info] Migrating schema "public" to version 8 - 34 card markdown
+[debug] Executing SQL: ALTER TABLE flashcard.card ADD COLUMN markdown TEXT NOT NULL default ''
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE flashcard.card ADD COLUMN markdown_html TEXT NOT NULL default ''
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 8 - 34 card markdown
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V9__154_nodejs_flashcardtype.sql ...
+[debug] Found statement at line 1: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description", "config")
+[debug] VALUES (
+[debug]            '78956eb8-c7c8-40ed-a255-202e9a800efb',
+[debug]            'code_exercise',
+[debug]            'code_exercise_nodejs',
+[debug]            'NodeJS Code Exercise',
+[debug]            'Javascript programming flashcard',
+[debug]            '{"docker_image": "masterypath.io/nodejs", "language": "javascript"}'
+[debug]        )
+[info] Migrating schema "public" to version 9 - 154 nodejs flashcardtype
+[debug] Executing SQL: INSERT INTO flashcard.flashcard_type ("id", "cardType", "name", "commonName", "description", "config")
+[debug] VALUES (
+[debug]            '78956eb8-c7c8-40ed-a255-202e9a800efb',
+[debug]            'code_exercise',
+[debug]            'code_exercise_nodejs',
+[debug]            'NodeJS Code Exercise',
+[debug]            'Javascript programming flashcard',
+[debug]            '{"docker_image": "masterypath.io/nodejs", "language": "javascript"}'
+[debug]        )
+[debug] Update Count: 1
+[debug] Successfully completed migration of schema "public" to version 9 - 154 nodejs flashcardtype
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V10__183_account_types.sql ...
+[debug] Found statement at line 1: ALTER TABLE organization.link_member ADD COLUMN internal BOOLEAN NOT NULL default FALSE
+[debug] Found statement at line 2: ALTER TABLE organization.link_member ADD COLUMN "payPerCourse" BOOLEAN NOT NULL default FALSE
+[info] Migrating schema "public" to version 10 - 183 account types
+[debug] Executing SQL: ALTER TABLE organization.link_member ADD COLUMN internal BOOLEAN NOT NULL default FALSE
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE organization.link_member ADD COLUMN "payPerCourse" BOOLEAN NOT NULL default FALSE
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 10 - 183 account types
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V11__111_org_config_membership_rates.sql ...
+[debug] Found statement at line 1: ALTER TABLE organization.config ADD COLUMN "memberMonthlyCost" DOUBLE PRECISION NOT NULL default 0.0
+[debug] Found statement at line 2: ALTER TABLE organization.config ADD COLUMN "memberAnnualCost" DOUBLE PRECISION NOT NULL default 0.0
+[debug] Found statement at line 3: ALTER TABLE organization.config ADD COLUMN "memberPaymentMethodRequired" BOOLEAN NOT NULL default FALSE
+[info] Migrating schema "public" to version 11 - 111 org config membership rates
+[debug] Executing SQL: ALTER TABLE organization.config ADD COLUMN "memberMonthlyCost" DOUBLE PRECISION NOT NULL default 0.0
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE organization.config ADD COLUMN "memberAnnualCost" DOUBLE PRECISION NOT NULL default 0.0
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE organization.config ADD COLUMN "memberPaymentMethodRequired" BOOLEAN NOT NULL default FALSE
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 11 - 111 org config membership rates
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V12__43_schema for billing.sql ...
+[debug] Found statement at line 1: create table organization.billing_items (
+[debug]                                           "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                           "name" VARCHAR NOT NULL UNIQUE,
+[debug]                                           "description" VARCHAR,
+[debug]                                           "cost" DOUBLE PRECISION NOT NULL default 0.0,
+[debug]                                           "monthly" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 9: insert into organization.billing_items ("id", "name", "description", "cost", "monthly")
+[debug]     values ('eed1efa5-b4d1-44b5-9f30-5b074d869061', 'Public Website Services', 'Website for content distribution and sales lead generation.', 34.95, true)
+[debug] Found statement at line 12: create table organization.billing_transactions (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "billingItem" UUID NOT NULL REFERENCES organization.billing_items("id"),
+[debug]     "timestamp" BIGINT NOT NULL,
+[debug]     "paid" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 20: create index organization_billing_transactions_orgID ON organization.billing_transactions("orgID")
+[debug] Found statement at line 21: create index organization_billing_transactions_paid ON organization.billing_transactions("paid")
+[info] Migrating schema "public" to version 12 - 43 schema for billing
+[debug] Executing SQL: create table organization.billing_items (
+[debug]                                           "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                           "name" VARCHAR NOT NULL UNIQUE,
+[debug]                                           "description" VARCHAR,
+[debug]                                           "cost" DOUBLE PRECISION NOT NULL default 0.0,
+[debug]                                           "monthly" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: insert into organization.billing_items ("id", "name", "description", "cost", "monthly")
+[debug]     values ('eed1efa5-b4d1-44b5-9f30-5b074d869061', 'Public Website Services', 'Website for content distribution and sales lead generation.', 34.95, true)
+[debug] Update Count: 1
+[debug] Executing SQL: create table organization.billing_transactions (
+[debug]     "id" UUID NOT NULL PRIMARY KEY,
+[debug]     "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]     "billingItem" UUID NOT NULL REFERENCES organization.billing_items("id"),
+[debug]     "timestamp" BIGINT NOT NULL,
+[debug]     "paid" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_billing_transactions_orgID ON organization.billing_transactions("orgID")
+[debug] Update Count: 0
+[debug] Executing SQL: create index organization_billing_transactions_paid ON organization.billing_transactions("paid")
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 12 - 43 schema for billing
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V13__187_schema for org_website_settings.sql ...
+[debug] Found statement at line 1: create schema websites
+[debug] Found statement at line 3: create table websites.site (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                    "domain" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "theme" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "ssl" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Found statement at line 11: create table websites.alias (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "siteID" UUID NOT NULL REFERENCES websites.site("id"),
+[debug]                                    "alias" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "ssl" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[info] Migrating schema "public" to version 13 - 187 schema for org website settings
+[debug] Executing SQL: create schema websites
+[debug] Update Count: 0
+[debug] Executing SQL: create table websites.site (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "orgID" UUID NOT NULL REFERENCES organization.org_profile("id"),
+[debug]                                    "domain" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "theme" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "ssl" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: create table websites.alias (
+[debug]                                    "id" UUID NOT NULL PRIMARY KEY,
+[debug]                                    "siteID" UUID NOT NULL REFERENCES websites.site("id"),
+[debug]                                    "alias" VARCHAR NOT NULL UNIQUE,
+[debug]                                    "ssl" BOOLEAN NOT NULL DEFAULT FALSE
+[debug] )
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 13 - 187 schema for org website settings
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V14__196_mind_map_published_course.sql ...
+[debug] Found statement at line 1: ALTER TABLE mind_map.mind_map ADD COLUMN "originMapID" UUID default NULL REFERENCES mind_map.mind_map("id")
+[debug] Found statement at line 2: ALTER TABLE mind_map.mind_map ADD COLUMN "releaseVersion" FLOAT CHECK ("releaseVersion" >= 0) default 0.0
+[debug] Found statement at line 3: ALTER TABLE mind_map.node ADD COLUMN "publishedID" UUID default NULL REFERENCES mind_map.node("id")
+[info] Migrating schema "public" to version 14 - 196 mind map published course
+[debug] Executing SQL: ALTER TABLE mind_map.mind_map ADD COLUMN "originMapID" UUID default NULL REFERENCES mind_map.mind_map("id")
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE mind_map.mind_map ADD COLUMN "releaseVersion" FLOAT CHECK ("releaseVersion" >= 0) default 0.0
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE mind_map.node ADD COLUMN "publishedID" UUID default NULL REFERENCES mind_map.node("id")
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 14 - 196 mind map published course
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[debug] Parsing V15__197_site_settings_ammendment.sql ...
+[debug] Found statement at line 1: ALTER TABLE websites.site ADD COLUMN "name" VARCHAR (255) NOT NULL DEFAULT ''
+[debug] Found statement at line 2: ALTER TABLE websites.site ADD COLUMN "description" TEXT NOT NULL DEFAULT ''
+[debug] Found statement at line 3: ALTER TABLE websites.site ADD COLUMN "logo" VARCHAR (255) NOT NULL DEFAULT ''
+[debug] Found statement at line 4: ALTER TABLE websites.site ADD COLUMN "favicon" VARCHAR (255) NOT NULL DEFAULT ''
+[info] Migrating schema "public" to version 15 - 197 site settings ammendment
+[debug] Executing SQL: ALTER TABLE websites.site ADD COLUMN "name" VARCHAR (255) NOT NULL DEFAULT ''
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE websites.site ADD COLUMN "description" TEXT NOT NULL DEFAULT ''
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE websites.site ADD COLUMN "logo" VARCHAR (255) NOT NULL DEFAULT ''
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE websites.site ADD COLUMN "favicon" VARCHAR (255) NOT NULL DEFAULT ''
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 15 - 197 site settings ammendment
+[debug] Schema history table "public"."flyway_schema_history" successfully updated to reflect changes
+[info] Successfully applied 15 migrations to schema "public" (execution time 00:01.147s)

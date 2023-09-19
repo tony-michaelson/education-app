@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/app/app/controllers/MemberController.scala:28:78: parameter value request in anonymous function is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def getJWT(walletID: String): Action[AnyContent] = Action.async { implicit request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

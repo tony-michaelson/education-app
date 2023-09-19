@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/app/conf/application.conf,/app/target/scala-2.13/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/app/conf/application.prod.conf,/app/target/scala-2.13/classes/application.prod.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/app/conf/messages,/app/target/scala-2.13/classes/messages)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/app/conf/routes,/app/target/scala-2.13/classes/routes)[0m

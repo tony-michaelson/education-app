@@ -1,2 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0mGenerate source code with slick-codegen: url=jdbc:postgresql://postgres:5432/masterypath, user=masterypath[0m
-[0m[[0m[0minfo[0m] [0m[0mSource code has generated in /app/modules/slick/target/scala-2.13/src_managed/main/io/masterypath/slick/Tables.scala[0m

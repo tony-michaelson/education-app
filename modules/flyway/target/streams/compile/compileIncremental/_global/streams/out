@@ -1,6 +1,0 @@
-[debug] [zinc] IncrementalCompile -----------
-[debug] IncrementalCompile.incrementalCompile
-[debug] previous = Stamps for: 2 products, 1 sources, 2 libraries
-[debug] current source = Set(${BASE}/modules/flyway/target/scala-2.12/src_managed/com/scalatsi/generator/ExportTypescript.scala)
-[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
-[debug] No changes
